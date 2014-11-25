@@ -7,3 +7,5 @@
 *.snm
 *.pdf
 *.out
+*.fdb_latexmk
+*.fls
