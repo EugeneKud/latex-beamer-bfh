@@ -1,4 +1,9 @@
+all: pvc
+
+pvc:
+	latexmk -pvc -pdf bfh-template.tex
+
 .PHONY: clear
 
 clear: 
-	latexmk -c
+	rm -rf *.aux *.fdb_latexmk *.fls *.log *.nav *.out *.snm *.toc
