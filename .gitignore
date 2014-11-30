@@ -3,6 +3,7 @@
 *.log
 *.nav
 *.gz
+*.pdf
 *.toc
 *.snm
 *.out
