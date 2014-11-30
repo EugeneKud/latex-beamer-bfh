@@ -5,7 +5,7 @@
 *.gz
 *.toc
 *.snm
-*.pdf
 *.out
 *.fdb_latexmk
 *.fls
+docs/
