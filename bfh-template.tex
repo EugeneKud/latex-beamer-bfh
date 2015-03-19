@@ -9,7 +9,7 @@
 
 % DOCUMENT INFORMATIONS: TITLE, AUTHOR, DATE, INSTITUTE
 \title{Title of the presentation}
-\title{Subtitle of the presentation}
+\subtitle{Subtitle of the presentation}
 \author[Eugene]{Eugene Kudryavtsev}
 \date{\today}
 \institute[BFH]{Berner Fachhochschule}
@@ -23,7 +23,7 @@
 
 \begin{document}
 
-\begin{frame}[plain,noframenumbering]
+\begin{frame}[plain]
   \titlepage
 \end{frame}
 
@@ -37,6 +37,38 @@
     \tableofcontents[currentsection]
   \end{frame}
 }
+
+
+\section{Frist Section}
+
+\begin{frame}{\insertsection}
+  \begin{itemize}
+    \item First Item
+    \item Second Item
+    \item Third Item
+  \end{itemize}
+\end{frame}
+
+\subsection{Subsection}
+
+\begin{frame}{\insertsection}{\insertsubsection}
+  \begin{itemize}
+    \item Fourth Item
+    \item Fifth Item
+    \item Sixth Item
+  \end{itemize}
+\end{frame}
+
+
+\section{Second Section}
+
+\begin{frame}{\insertsection}
+  \begin{itemize}
+    \item First Item
+    \item Second Item
+    \item Third Item
+  \end{itemize}
+\end{frame}
 
 \section*{References}
 \begin{frame}{References}
