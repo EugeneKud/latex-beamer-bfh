@@ -1,39 +1,64 @@
 \documentclass{beamer}
-\usetheme{BFH}
 
 % INPUT ENCODING, FONT ENCODING, LANGUAGE
-    \usepackage[utf8]{inputenc}
-    \usepackage[T1]{fontenc}
-    \usepackage[frenchb]{babel}
-    %\usepackage[ngerman]{babel} % n = *n*eue Rechtschreibung
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[english]{babel}
+% \usepackage[frenchb]{babel}
+% \usepackage[ngerman]{babel}
 
 % DOCUMENT INFORMATIONS: TITLE, AUTHOR, DATE, INSTITUTE
-    \title{Éducation digitale }
-    \author[Rosalie G. \and Eugene K.]{Rosalie Gerber \and Eugene Kudryavtsev}
-    \date{10 décembre 2014}
-    \institute[]{Haute école spécialisée bernoise}
-	\logo{\includegraphics{bfh-logo.png}}
+\title{Title of the presentation}
+\title{Subtitle of the presentation}
+\author[Eugene]{Eugene Kudryavtsev}
+\date{\today}
+\institute[BFH]{Berner Fachhochschule}
+\titlegraphic{\includegraphics[scale=0.5]{bfh-logo.png}} % logo on titlepage only
 
-% OTHER PACKAGES
-    %\usepackage{hyperref} % links
-    %\usepackage{beamerthemeBfh}    
-
+% PACKAGES
+\usetheme{BFH} % use BFH theme
+\usepackage{color}
+\usepackage{listings}
+\usepackage{hyperref} % links
 
 \begin{document}
 
-    \begin{frame}
-        \titlepage
-    \end{frame}
+\begin{frame}[plain,noframenumbering]
+  \titlepage
+\end{frame}
 
-    \section*{Aperçu}
-    \begin{frame}
-        \frametitle{Aperçu}
-        \tableofcontents
-    \end{frame}
+\begin{frame}[noframenumbering]{Overview}
+  \tableofcontents
+\end{frame}
 
-    \section*{Sources}
-    \begin{frame}
-        \frametitle{Sources}
-    \end{frame}
-    
+\AtBeginSection[]
+{
+  \begin{frame}[noframenumbering]{Overview}
+    \tableofcontents[currentsection]
+  \end{frame}
+}
+
+\section*{References}
+\begin{frame}{References}
+	\begin{thebibliography}{10}
+    \beamertemplateonlinebibitems
+    \bibitem{http://www.zinktypografie.nl/latex.php?lang=en}
+    Zink Typography Agency
+    \newblock {\small{What is \rmfamily\LaTeX}?}
+		\newblock http://www.zinktypografie.nl
+
+    \beamertemplateonlinebibitems
+    \bibitem{http://liantze.penguinattack.org/training_consultancy.html}
+    Lim Lian Tze's blog
+    \newblock {{\rmfamily\LaTeX}: Beautiful Typesetting}
+		\newblock http://liantze.penguinattack.org/latextypesetting.html
+
+    \beamertemplateonlinebibitems
+    \bibitem{https://www.sharelatex.com/learn/}
+    Share{\rmfamily\LaTeX{}} Online Ressource
+    \newblock {Guides \& References}
+		\newblock https://www.sharelatex.com
+    \end{thebibliography}
+\end{frame}
+
 \end{document}
